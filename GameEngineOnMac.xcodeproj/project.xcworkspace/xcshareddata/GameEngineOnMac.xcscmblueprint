@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "68EE096261A1699337FEF71455126462526977A3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E462A8629C664491E2C7ED0690178BB9DB6D7920" : 9223372036854775807,
+    "68EE096261A1699337FEF71455126462526977A3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "464DECEB-0569-4126-BAB5-FC5FDCFB280C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E462A8629C664491E2C7ED0690178BB9DB6D7920" : "..\/..\/LibSources\/Simple-OpenGL-Image-Library",
+    "68EE096261A1699337FEF71455126462526977A3" : "GameEngineOnMac\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GameEngineOnMac",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GameEngineOnMac.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bigflyboy\/GameEngine.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "68EE096261A1699337FEF71455126462526977A3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kbranigan\/Simple-OpenGL-Image-Library.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E462A8629C664491E2C7ED0690178BB9DB6D7920"
+    }
+  ]
+}
