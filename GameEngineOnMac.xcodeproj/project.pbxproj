@@ -21,6 +21,8 @@
 		5CAD8E8B1E8D0BD5002C1E0C /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAD8E8A1E8D0BD5002C1E0C /* libSOIL.a */; };
 		5CAD8E8E1E8D0BF1002C1E0C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAD8E8C1E8D0BF1002C1E0C /* libglfw3.a */; };
 		5CAD8E8F1E8D0BF1002C1E0C /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAD8E8D1E8D0BF1002C1E0C /* libGLEW.a */; };
+		5CB947001E9E57C900AA2456 /* colorscene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CB946FE1E9E57C900AA2456 /* colorscene.cpp */; };
+		5CD62BFE1E9E07EC00EEC5F2 /* TransCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CD62BFC1E9E07EC00EEC5F2 /* TransCallback.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +67,14 @@
 		5CAD8E8A1E8D0BD5002C1E0C /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = "../../../LibSources/Simple-OpenGL-Image-Library/output/lib/libSOIL.a"; sourceTree = "<group>"; };
 		5CAD8E8C1E8D0BF1002C1E0C /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
 		5CAD8E8D1E8D0BF1002C1E0C /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.a; sourceTree = "<group>"; };
+		5CB946FE1E9E57C900AA2456 /* colorscene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorscene.cpp; sourceTree = "<group>"; };
+		5CB946FF1E9E57C900AA2456 /* colorscene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = colorscene.hpp; sourceTree = "<group>"; };
+		5CB947011E9E58EE00AA2456 /* colors.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = colors.vs; sourceTree = "<group>"; };
+		5CB947021E9E591900AA2456 /* colors.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = colors.frag; sourceTree = "<group>"; };
+		5CB947031E9E595800AA2456 /* lamp.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lamp.vs; sourceTree = "<group>"; };
+		5CB947041E9E598400AA2456 /* lamp.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lamp.frag; sourceTree = "<group>"; };
+		5CD62BFC1E9E07EC00EEC5F2 /* TransCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransCallback.cpp; sourceTree = "<group>"; };
+		5CD62BFD1E9E07EC00EEC5F2 /* TransCallback.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TransCallback.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +163,8 @@
 		5CAD8E771E8D0AF6002C1E0C /* GameEngineOnMac */ = {
 			isa = PBXGroup;
 			children = (
+				5CB946FD1E9E579400AA2456 /* 04Lignting */,
+				5CD62BFB1E9E07C500EEC5F2 /* 03Transformation */,
 				5C1525DC1E9DF8DD00957841 /* 02Texture */,
 				5C1525CF1E9DEA5B00957841 /* Utils */,
 				5C1525CB1E9DE76600957841 /* 01Text */,
@@ -176,6 +188,28 @@
 				5CAD8E801E8D0B9A002C1E0C /* GLUT.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CB946FD1E9E579400AA2456 /* 04Lignting */ = {
+			isa = PBXGroup;
+			children = (
+				5CB946FE1E9E57C900AA2456 /* colorscene.cpp */,
+				5CB946FF1E9E57C900AA2456 /* colorscene.hpp */,
+				5CB947011E9E58EE00AA2456 /* colors.vs */,
+				5CB947021E9E591900AA2456 /* colors.frag */,
+				5CB947031E9E595800AA2456 /* lamp.vs */,
+				5CB947041E9E598400AA2456 /* lamp.frag */,
+			);
+			name = 04Lignting;
+			sourceTree = "<group>";
+		};
+		5CD62BFB1E9E07C500EEC5F2 /* 03Transformation */ = {
+			isa = PBXGroup;
+			children = (
+				5CD62BFC1E9E07EC00EEC5F2 /* TransCallback.cpp */,
+				5CD62BFD1E9E07EC00EEC5F2 /* TransCallback.hpp */,
+			);
+			name = 03Transformation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +271,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C1525CE1E9DE7AC00957841 /* TriangleCallback.cpp in Sources */,
+				5CD62BFE1E9E07EC00EEC5F2 /* TransCallback.cpp in Sources */,
 				5C1525C71E9DD7B200957841 /* GLInit.cpp in Sources */,
 				5C1525CA1E9DDB8B00957841 /* SurfaceCallBack.cpp in Sources */,
 				5CAD8E791E8D0AF6002C1E0C /* main.cpp in Sources */,
 				5C1525DF1E9DF90300957841 /* TextureCallback.cpp in Sources */,
+				5CB947001E9E57C900AA2456 /* colorscene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

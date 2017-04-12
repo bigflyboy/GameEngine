@@ -14,7 +14,8 @@
 // GLFW
 #include <GLFW/glfw3.h>
 #include "GLInit.hpp"
-#include "TextureCallback.hpp"
+#include "SurfaceCallBack.hpp"
+#include "colorscene.hpp"
 
 // Function prototypes
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
@@ -30,7 +31,7 @@ int main(int argc, const char * argv[]) {
     glInit->GLFWCreateWindow(width, height, "Learn OpenGL");
     glfwSetKeyCallback(glInit->getWindow(), key_callback);
     glInit->GLEWInit();
-    SurfaceCallBack* surface = new TextureCallback();
+    SurfaceCallBack* surface = new ColorScene();
     glInit->setSurfaceCallBack(surface);
     glInit->GLStart();
     

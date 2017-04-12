@@ -46,7 +46,7 @@ void GLInit::GLEWInit(){
 }
 
 void GLInit::GLStart(){
-    glViewport(0, 0, m_width, m_height);
+    glViewport(0, 0, m_width * 2, m_height * 2);
     m_callback->SurfaceInit();
     while(!glfwWindowShouldClose(window))
     {
