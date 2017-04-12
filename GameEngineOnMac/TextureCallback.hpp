@@ -1,13 +1,13 @@
 //
-//  TriangleCallback.hpp
+//  TextureCallback.hpp
 //  GameEngineOnMac
 //
 //  Created by 王志远 on 2017/4/12.
 //  Copyright © 2017年 王志远. All rights reserved.
 //
 
-#ifndef TriangleCallback_hpp
-#define TriangleCallback_hpp
+#ifndef TextureCallback_hpp
+#define TextureCallback_hpp
 
 #include <stdio.h>
 // GLEW
@@ -17,20 +17,20 @@
 #include <GLFW/glfw3.h>
 #include "SurfaceCallBack.hpp"
 #include "shader.h"
+#include <SOIL.h>
 
-class TriangleCallback:public SurfaceCallBack{
+class TextureCallback:public SurfaceCallBack{
 public:
-    
-    TriangleCallback();
-    
-    ~TriangleCallback();
-    
+    TextureCallback();
+    ~TextureCallback();
     virtual void SurfaceInit();
     virtual void SurfaceRender();
     virtual void SurfaceFinish();
 private:
     Shader* ourShader;
-    GLuint VBO, VAO;
+    GLuint VBO, VAO, EBO;
+    GLuint texture1;
+    GLuint texture2;
 };
 
-#endif /* TriangleCallback_hpp */
+#endif /* TextureCallback_hpp */

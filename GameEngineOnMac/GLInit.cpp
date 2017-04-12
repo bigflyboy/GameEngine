@@ -26,6 +26,8 @@ void GLInit::GlFWInit(){
 }
 
 void GLInit::GLFWCreateWindow(int width, int height, string name){
+    m_width = width;
+    m_height = height;
     window = glfwCreateWindow(width, height, name.c_str(), nullptr, nullptr);
     if (window == nullptr)
     {
@@ -44,6 +46,7 @@ void GLInit::GLEWInit(){
 }
 
 void GLInit::GLStart(){
+    glViewport(0, 0, m_width, m_height);
     m_callback->SurfaceInit();
     while(!glfwWindowShouldClose(window))
     {
@@ -53,6 +56,10 @@ void GLInit::GLStart(){
     }
     m_callback->SurfaceFinish();
     glfwTerminate();
+}
+
+GLFWwindow* GLInit::getWindow(){
+    return window;
 }
 
 void GLInit::setSurfaceCallBack(SurfaceCallBack* callback){

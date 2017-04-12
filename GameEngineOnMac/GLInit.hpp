@@ -32,9 +32,10 @@ public:
     void GLEWInit();
     void GLStart();
     void setSurfaceCallBack(SurfaceCallBack* callback);
+    GLFWwindow* getWindow();
 private:
-    int width, height;
-    string name;
+    int m_width, m_height;
+    string m_name;
     SurfaceCallBack* m_callback;
     GLFWwindow* window;
 };

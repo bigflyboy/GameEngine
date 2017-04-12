@@ -11,6 +11,7 @@
 		5C1525CA1E9DDB8B00957841 /* SurfaceCallBack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C1525C81E9DDB8B00957841 /* SurfaceCallBack.cpp */; };
 		5C1525CE1E9DE7AC00957841 /* TriangleCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C1525CC1E9DE7AC00957841 /* TriangleCallback.cpp */; };
 		5C1525D81E9DEB1800957841 /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1525D71E9DEB1800957841 /* libassimp.3.3.1.dylib */; };
+		5C1525DF1E9DF90300957841 /* TextureCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C1525DD1E9DF90300957841 /* TextureCallback.cpp */; };
 		5CAD8E791E8D0AF6002C1E0C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CAD8E781E8D0AF6002C1E0C /* main.cpp */; };
 		5CAD8E811E8D0B9A002C1E0C /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAD8E801E8D0B9A002C1E0C /* GLUT.framework */; };
 		5CAD8E831E8D0BA2002C1E0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAD8E821E8D0BA2002C1E0C /* Cocoa.framework */; };
@@ -47,6 +48,13 @@
 		5C1525D31E9DEA7900957841 /* model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = model.h; path = learnopengl/model.h; sourceTree = "<group>"; };
 		5C1525D41E9DEA7900957841 /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shader.h; path = learnopengl/shader.h; sourceTree = "<group>"; };
 		5C1525D71E9DEB1800957841 /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = ../../../../../usr/local/Cellar/assimp/3.3.1/lib/libassimp.3.3.1.dylib; sourceTree = "<group>"; };
+		5C1525D91E9DEFE500957841 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		5C1525DA1E9DF1FB00957841 /* basic.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.vs; sourceTree = "<group>"; };
+		5C1525DB1E9DF2A900957841 /* basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.frag; sourceTree = "<group>"; };
+		5C1525DD1E9DF90300957841 /* TextureCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureCallback.cpp; sourceTree = "<group>"; };
+		5C1525DE1E9DF90300957841 /* TextureCallback.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextureCallback.hpp; sourceTree = "<group>"; };
+		5C1525E01E9DF9E300957841 /* texture.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = texture.vs; sourceTree = "<group>"; };
+		5C1525E11E9DFA9B00957841 /* texture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = texture.frag; sourceTree = "<group>"; };
 		5CAD8E751E8D0AF6002C1E0C /* GameEngineOnMac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngineOnMac; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAD8E781E8D0AF6002C1E0C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5CAD8E801E8D0B9A002C1E0C /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -95,6 +103,8 @@
 			children = (
 				5C1525CC1E9DE7AC00957841 /* TriangleCallback.cpp */,
 				5C1525CD1E9DE7AC00957841 /* TriangleCallback.hpp */,
+				5C1525DA1E9DF1FB00957841 /* basic.vs */,
+				5C1525DB1E9DF2A900957841 /* basic.frag */,
 			);
 			name = 01Text;
 			sourceTree = "<group>";
@@ -107,8 +117,20 @@
 				5C1525D21E9DEA7900957841 /* mesh.h */,
 				5C1525D31E9DEA7900957841 /* model.h */,
 				5C1525D41E9DEA7900957841 /* shader.h */,
+				5C1525D91E9DEFE500957841 /* Header.h */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		5C1525DC1E9DF8DD00957841 /* 02Texture */ = {
+			isa = PBXGroup;
+			children = (
+				5C1525DD1E9DF90300957841 /* TextureCallback.cpp */,
+				5C1525DE1E9DF90300957841 /* TextureCallback.hpp */,
+				5C1525E01E9DF9E300957841 /* texture.vs */,
+				5C1525E11E9DFA9B00957841 /* texture.frag */,
+			);
+			name = 02Texture;
 			sourceTree = "<group>";
 		};
 		5CAD8E6C1E8D0AF5002C1E0C = {
@@ -131,6 +153,7 @@
 		5CAD8E771E8D0AF6002C1E0C /* GameEngineOnMac */ = {
 			isa = PBXGroup;
 			children = (
+				5C1525DC1E9DF8DD00957841 /* 02Texture */,
 				5C1525CF1E9DEA5B00957841 /* Utils */,
 				5C1525CB1E9DE76600957841 /* 01Text */,
 				5C1525C41E9DD75F00957841 /* GLInit */,
@@ -217,6 +240,7 @@
 				5C1525C71E9DD7B200957841 /* GLInit.cpp in Sources */,
 				5C1525CA1E9DDB8B00957841 /* SurfaceCallBack.cpp in Sources */,
 				5CAD8E791E8D0AF6002C1E0C /* main.cpp in Sources */,
+				5C1525DF1E9DF90300957841 /* TextureCallback.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
