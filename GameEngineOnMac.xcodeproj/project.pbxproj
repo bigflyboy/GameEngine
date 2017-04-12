@@ -10,6 +10,7 @@
 		5C1525C71E9DD7B200957841 /* GLInit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C1525C51E9DD7B200957841 /* GLInit.cpp */; };
 		5C1525CA1E9DDB8B00957841 /* SurfaceCallBack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C1525C81E9DDB8B00957841 /* SurfaceCallBack.cpp */; };
 		5C1525CE1E9DE7AC00957841 /* TriangleCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C1525CC1E9DE7AC00957841 /* TriangleCallback.cpp */; };
+		5C1525D81E9DEB1800957841 /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1525D71E9DEB1800957841 /* libassimp.3.3.1.dylib */; };
 		5CAD8E791E8D0AF6002C1E0C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CAD8E781E8D0AF6002C1E0C /* main.cpp */; };
 		5CAD8E811E8D0B9A002C1E0C /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAD8E801E8D0B9A002C1E0C /* GLUT.framework */; };
 		5CAD8E831E8D0BA2002C1E0C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAD8E821E8D0BA2002C1E0C /* Cocoa.framework */; };
@@ -40,6 +41,12 @@
 		5C1525C91E9DDB8B00957841 /* SurfaceCallBack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SurfaceCallBack.hpp; sourceTree = "<group>"; };
 		5C1525CC1E9DE7AC00957841 /* TriangleCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TriangleCallback.cpp; sourceTree = "<group>"; };
 		5C1525CD1E9DE7AC00957841 /* TriangleCallback.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TriangleCallback.hpp; sourceTree = "<group>"; };
+		5C1525D01E9DEA7900957841 /* camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = camera.h; path = learnopengl/camera.h; sourceTree = "<group>"; };
+		5C1525D11E9DEA7900957841 /* filesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filesystem.h; path = learnopengl/filesystem.h; sourceTree = "<group>"; };
+		5C1525D21E9DEA7900957841 /* mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mesh.h; path = learnopengl/mesh.h; sourceTree = "<group>"; };
+		5C1525D31E9DEA7900957841 /* model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = model.h; path = learnopengl/model.h; sourceTree = "<group>"; };
+		5C1525D41E9DEA7900957841 /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shader.h; path = learnopengl/shader.h; sourceTree = "<group>"; };
+		5C1525D71E9DEB1800957841 /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = ../../../../../usr/local/Cellar/assimp/3.3.1/lib/libassimp.3.3.1.dylib; sourceTree = "<group>"; };
 		5CAD8E751E8D0AF6002C1E0C /* GameEngineOnMac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameEngineOnMac; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAD8E781E8D0AF6002C1E0C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5CAD8E801E8D0B9A002C1E0C /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -57,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1525D81E9DEB1800957841 /* libassimp.3.3.1.dylib in Frameworks */,
 				5CAD8E8E1E8D0BF1002C1E0C /* libglfw3.a in Frameworks */,
 				5CAD8E8F1E8D0BF1002C1E0C /* libGLEW.a in Frameworks */,
 				5CAD8E8B1E8D0BD5002C1E0C /* libSOIL.a in Frameworks */,
@@ -91,6 +99,18 @@
 			name = 01Text;
 			sourceTree = "<group>";
 		};
+		5C1525CF1E9DEA5B00957841 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5C1525D01E9DEA7900957841 /* camera.h */,
+				5C1525D11E9DEA7900957841 /* filesystem.h */,
+				5C1525D21E9DEA7900957841 /* mesh.h */,
+				5C1525D31E9DEA7900957841 /* model.h */,
+				5C1525D41E9DEA7900957841 /* shader.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		5CAD8E6C1E8D0AF5002C1E0C = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +131,7 @@
 		5CAD8E771E8D0AF6002C1E0C /* GameEngineOnMac */ = {
 			isa = PBXGroup;
 			children = (
+				5C1525CF1E9DEA5B00957841 /* Utils */,
 				5C1525CB1E9DE76600957841 /* 01Text */,
 				5C1525C41E9DD75F00957841 /* GLInit */,
 				5CAD8E781E8D0AF6002C1E0C /* main.cpp */,
@@ -121,6 +142,7 @@
 		5CAD8E7F1E8D0B9A002C1E0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C1525D71E9DEB1800957841 /* libassimp.3.3.1.dylib */,
 				5CAD8E8C1E8D0BF1002C1E0C /* libglfw3.a */,
 				5CAD8E8D1E8D0BF1002C1E0C /* libGLEW.a */,
 				5CAD8E8A1E8D0BD5002C1E0C /* libSOIL.a */,
@@ -300,6 +322,7 @@
 					"/Users/wangzhiyuan/LibSources/Simple-OpenGL-Image-Library/output/lib",
 					/usr/local/lib,
 					"$(inherited)",
+					/usr/local/Cellar/assimp/3.3.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -317,6 +340,7 @@
 					"/Users/wangzhiyuan/LibSources/Simple-OpenGL-Image-Library/output/lib",
 					/usr/local/lib,
 					"$(inherited)",
+					/usr/local/Cellar/assimp/3.3.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
